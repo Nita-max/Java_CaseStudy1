@@ -37,7 +37,7 @@ This system allows users to manage various types of bank accounts, perform trans
 
 Below is the UML diagram representing the full architecture:
 
-![UML Diagram](./diagram.png)
+![UML Diagram](UML%20diagram.jpg)
 UML diagram
 
 ---
