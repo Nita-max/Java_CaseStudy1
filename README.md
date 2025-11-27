@@ -1,73 +1,132 @@
-# 🏦 BankProject
+# 🏦 Bank Management System (Java – OOPs Project)
 
-![Java](https://img.shields.io/badge/Language-Java-orange) ![Eclipse](https://img.shields.io/badge/IDE-Eclipse-blue) ![GitHub](https://img.shields.io/badge/Hosted%20on-GitHub-green)
+This project is a **Bank Management System** implemented in **Java**, following strong **Object-Oriented Programming** concepts such as abstraction, inheritance, polymorphism, interface implementation, and encapsulation.
 
-## 📖 Description
-
-**BankProject** is a Java-based case study project for managing bank operations.
-It allows users to perform various banking functions and keeps track of transactions efficiently.
+This system allows users to manage various types of bank accounts, perform transactions, calculate interest, and view reports.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-* ✅ Create new accounts (Saving, Current, Salary, Loan)
-* ✅ Deposit and Withdraw money
-* ✅ Display account details and all accounts
-* ✅ Maintain transaction history
-* ✅ Calculate interest for accounts
-* ✅ Generate end-of-day report
+* Create different types of bank accounts:
 
----
-
-## 🛠️ Technology Stack
-
-| Technology   | Purpose                     |
-| ------------ | --------------------------- |
-| Java         | Core programming language   |
-| Eclipse IDE  | Development environment     |
-| Git & GitHub | Version control and hosting |
+  * Savings Account
+  * Current Account
+  * Loan Account
+  * Salary Account
+* Deposit & Withdraw money
+* Overdraft handling (Current Account)
+* Loan repayment logic
+* Interest calculation
+* End-of-Day Report
+* Transaction history for each account
+* Fully menu-driven program
 
 ---
 
-## 🚀 How to Run
+## 🧩 Technologies Used
+
+* **Java (Core Java)**
+* **OOP Concepts**
+* **UML Design**
+* **Eclipse/VS Code/IntelliJ**
+
+---
+
+## 📘 UML Class Diagram
+
+Below is the UML diagram representing the full architecture:
+
+![UML Diagram](./diagram.png)
+
+> *(Replace `diagram.png` with the name of your uploaded diagram file)*
+
+---
+
+## 🏗️ Project Structure
+
+```
+src/
+ ├── AccountOperation.java     # Interface
+ ├── BankAccount.java          # Abstract Parent Class
+ ├── CurrentAccount.java       # Child Class
+ ├── SavingsAccount.java       # Child Class
+ ├── SalaryAccount.java        # Child Class
+ ├── LoanAccount.java          # Child Class
+ ├── Transaction.java          # Transaction Model
+ ├── Bank.java                 # Bank Details
+ └── Test.java                 # Main Menu-Driven Program
+```
+
+---
+
+## 📄 Class Overview
+
+### 🔹 **AccountOperation (Interface)**
+
+Defines abstract operations like deposit, withdraw, showDetails, get/set account data, etc.
+
+### 🔹 **BankAccount (Abstract Class)**
+
+Parent class for all accounts. Contains:
+
+* Common fields (accountNumber, holderName, balance, Aadhaar, nominee)
+* Common methods for deposit, show details, add transactions etc.
+
+### 🔹 **Derived Classes**
+
+Each child class overrides withdrawal rules:
+
+| Account Type       | Special Rules                                  |
+| ------------------ | ---------------------------------------------- |
+| **SavingAccount**  | Minimum Balance = 1000, Interest Rate applies  |
+| **CurrentAccount** | Overdraft limit available                      |
+| **SalaryAccount**  | Last Salary Date check                         |
+| **LoanAccount**    | Loan Amount, Outstanding Amount, EMI deduction |
+
+### 🔹 **Transaction Class**
+
+Stores transactionID, amount, date, type, updated balance.
+
+---
+
+## ▶️ How to Run
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/Nita-max/Java_CaseStudy1.git
-```
-
-2. Open the project in **Eclipse IDE**.
-3. Run the `BankController.java` or `Test.java` to start the application.
-
----
-
-## 📁 Project Structure
-
-```
-BankProject/
-│
-├─ src/
-│   └─ practiceworkjava/  # Java source code
-├─ .gitignore
-├─ README.md
-├─ .classpath
-├─ .project
-└─ .settings/
-```
+   ```
+   git clone https://github.com/your-username/your-repository.git
+   ```
+2. Open project in **Eclipse/VS Code/IntelliJ**.
+3. Run `Test.java`
+4. Use the console menu to perform operations.
 
 ---
 
-## 👩‍💻 Author
+## 📝 Sample Menu
 
-**Nita Waghchaure**
+```
+1. Create Account
+2. Deposit
+3. Withdraw
+4. Display Account Details
+5. Display All Accounts
+6. Transaction History
+7. Calculate Interest
+8. End Of Day Report
+9. Exit
+```
 
 ---
 
-## 📌 Notes
+## 📌 Future Enhancements
 
-* This project is for learning Java object-oriented concepts.
-* All Eclipse configuration files are ignored from future commits.
-* Use this README as a reference for understanding project features and structure.
+* GUI using JavaFX or Swing
+* Database integration (MySQL)
+* Web-based version using Spring Boot
 
+---
+
+## 🙌 Author
+
+Created by **Nita Waghchaure** 
